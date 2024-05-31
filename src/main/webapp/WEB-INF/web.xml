@@ -11,6 +11,16 @@
         <location>/error500.jsp</location>
     </error-page>
 
+  <!-- Configurazione del filtro per gli header di sicurezza -->
+  <filter>
+    <filter-name>SecurityHeadersFilter</filter-name>
+    <filter-class>security.SecurityHeadersFilter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>SecurityHeadersFilter</filter-name>
+    <url-pattern>/*</url-pattern>
+  </filter-mapping>
+
   <login-config>
   	<auth-method>FORM</auth-method>
   	<form-login-config>
@@ -41,5 +51,6 @@
   <security-role>
   	<role-name>registeredUser</role-name>
   </security-role>
+  
   
 </web-app>
