@@ -4,6 +4,12 @@
   <welcome-file-list>
     <welcome-file>intro.jsp</welcome-file>
   </welcome-file-list>
+  
+  <!-- Configurazione per la pagina di errore -->
+    <error-page>
+        <error-code>500</error-code>
+        <location>/error500.jsp</location>
+    </error-page>
 
   <login-config>
   	<auth-method>FORM</auth-method>
